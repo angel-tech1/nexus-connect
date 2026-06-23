@@ -1,6 +1,9 @@
 # Ignore application files
 node_modules
 .idea/
+.gradle/
+build/
+target/
 
 # Local .terraform directories
 **/.terraform/*
