@@ -15,8 +15,6 @@ application {
 val ktorVersion: String by project
 val kotlinVersion: String by project
 
-
-
 dependencies {
     implementation(kotlin("stdlib"))
     implementation("io.ktor:ktor-server-core-jvm:$ktorVersion")
