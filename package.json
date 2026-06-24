@@ -1,5 +1,5 @@
 {
   "dependencies": {
-    "terraform": "^1.20.2"
+    "terraform": "^1.13.0"
   }
 }
