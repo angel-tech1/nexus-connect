@@ -10,7 +10,7 @@ variable "instance_name" {
 
 variable "project_name" {
   type        = string
-  description = "Name of the example project."
+  description = "Name of the project."
 
   default = "nexus-connect"
 }
