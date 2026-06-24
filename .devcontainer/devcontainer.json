@@ -1,0 +1,40 @@
+{
+	"name": "Nexus Connect — Kotlin/JVM + IntelliJ IDEA",
+	"image": "mcr.microsoft.com/devcontainers/kotlin:1-21-jdk-noble",
+
+	"features": {
+		"ghcr.io/devcontainers/features/java:1": {
+			"version": "21",
+			"jdkDistro": "temurin"
+		},
+		"ghcr.io/devcontainers-extra/features/intellij-idea-enterprise:2": {
+			"version": "latest"
+		}
+	},
+
+	"customizations": {
+		"vscode": {
+			"settings": {
+				"kotlin.languageServer.externalOptions.global.jdk": "/usr/lib/jvm/temurin-21-jdk-amd64",
+				"java.jdt.ls.java.home": "/usr/lib/jvm/temurin-21-jdk-amd64"
+			},
+			"extensions": [
+				"kotlin.kotlin-ide"
+			]
+		},
+		"intellij-idea": {
+			"plugins": [
+				"org.jetbrains.kotlin",
+				"redhat.java",
+				"vscjava.vscode-maven",
+				"gradle.idea-plugin"
+			]
+		}
+	},
+
+	"forwardPorts": [8080],
+
+	"postCreateCommand": "./gradlew --version",
+
+	"remoteUser": "vscode"
+}
