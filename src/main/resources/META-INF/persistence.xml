@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="https://jakarta.ee/xml/ns/jakarta-persistence"
+             version="3.1">
+
+    <persistence-unit name="nexus-connect" transaction-type="RESOURCE_LOCAL">
+        <class>com.nexus.connect.model.v1.Message</class>
+        <class>com.nexus.connect.model.v1.Attachment</class>
+
+        <properties>
+            <!-- Schema generation strategy -->
+            <property name="jakarta.persistence.schema-generation.database.action" value="update"/>
+            <property name="hibernate.hbm2ddl.auto" value="update"/>
+            <property name="hibernate.show_sql" value="false"/>
+            <property name="hibernate.format_sql" value="true"/>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect"/>
+
+            <!-- JDBC connection — overridden at runtime from application.conf -->
+            <property name="jakarta.persistence.jdbc.url" value="jdbc:postgresql://localhost:5432/nexus_connect"/>
+            <property name="jakarta.persistence.jdbc.user" value="postgres"/>
+            <property name="jakarta.persistence.jdbc.password" value="postgres"/>
+        </properties>
+    </persistence-unit>
+
+</persistence>

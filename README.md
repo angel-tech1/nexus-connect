@@ -6,7 +6,7 @@ Kotlin back-end code for the Nexus Connect application.
 
 - Kotlin back-end application codebase
 - Gradle build configured with the Kotlin DSL
-- Java toolchain targeting Java 25
+- Java toolchain targeting Java 21
 - UTF-8 source encoding
 - Terraform infrastructure files for AWS EC2 deployment modules
 
